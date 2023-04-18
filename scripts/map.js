@@ -89,6 +89,7 @@ $(window).on('load', function() {
       for (var i in groups) {
         var name = groups[i];
         layers[name] = L.layerGroup();
+        layers[name].toggle;
         layers[name].addTo(map);
       }
     }
@@ -166,7 +167,7 @@ $(window).on('load', function() {
         : getSetting('_pointsLegendPos');
 
       var pointsLegend = L.control.layers(null, layers, {
-        collapsed: true,
+        collapsed: flase,
         position: pos,
       });
 
