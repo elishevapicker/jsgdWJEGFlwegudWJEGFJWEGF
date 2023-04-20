@@ -168,7 +168,6 @@ $(window).on('load', function() {
       var pointsLegend = L.control.layers(null, layers, {
         collapsed: false,
         position: pos,
-        hideSingleBase: true,
       });
 
       if (getSetting('_pointsLegendPos') !== 'off') {
