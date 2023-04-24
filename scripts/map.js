@@ -87,11 +87,11 @@ $(window).on('load', function() {
       layers = undefined;
     } else {
       for (var i in groups) {
-       
+       if (i==5) {
         var name = groups[i];
         layers[name] = L.layerGroup();
         layers[name].addTo(map);
-    
+       }
       }
     }
     return layers;
